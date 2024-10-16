@@ -136,6 +136,10 @@ std::vector<unsigned int> ids = {0, 1, 2, 0, 1, 3};
 glBufferData(GL_ELEMENT_ARRAY_BUFFER, ids.size() * sizeof(unsigned int), ids, GL_STATIC_DRAW);
 ```
 
+## Example
+
+* [Create a window](./code/window/src/main.cpp)
+
 ## Terminology
 
 * *GLFW*: GLFW is a library to manage windows and input. We could do without it but it would be cumbersome
