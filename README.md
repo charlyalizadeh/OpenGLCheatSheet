@@ -138,11 +138,15 @@ std::vector<unsigned int> ids = {0, 1, 2, 0, 1, 3};
 glBufferData(GL_ELEMENT_ARRAY_BUFFER, ids.size() * sizeof(unsigned int), ids, GL_STATIC_DRAW);
 ```
 
-## Example
+## Examples
 
 * [Create a window](./code/window/)
 * [Draw a triangle](./code/triangle/)
 * [Draw a triangle using Object Oriented paradigm](./code/triangle_OO/)
+
+## Projects
+
+* [Maze generation](https://github.com/charlyalizadeh/OpenGLMaze)
 
 ## Terminology
 
