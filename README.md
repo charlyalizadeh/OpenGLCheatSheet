@@ -1,5 +1,6 @@
 # OpenGL CheatSheet
 
+
 * [Setup OpenGL](#setup-opengl)
 * [Initialising OpenGL](#initialising-opengl)
   * [Init GLFW with the wanted OpenGL version](#init-glfw-with-the-wanted-opengl-version)
@@ -10,6 +11,7 @@
 * [Vertex Buffer Object](#vertex-buffer-object)
 * [Vertex Attribute Object](#vertex-attribute-object)
 * [Index Buffer Object](#index-buffer-object)
+* [Example](#example)
 * [Terminology](#terminology)
 * [Source](#source)
 
