@@ -142,8 +142,9 @@ glBufferData(GL_ELEMENT_ARRAY_BUFFER, ids.size() * sizeof(unsigned int), ids, GL
 
 * [Create a window](./code/window/)
 * [Draw a triangle](./code/triangle/)
-* [Draw a triangle using Object Oriented paradigm](./code/triangle_OO/)
-* [Draw a square reusing vertices multiple times (Index Buffer)](./code/square)
+* [Draw a triangle (Object Oriented)](./code/triangle_OO/)
+* [Draw a square with Index Buffer](./code/square)
+* [Draw a square with Index Buffer (Object Oriented)](./code/square_OO)
 
 ## Projects
 
