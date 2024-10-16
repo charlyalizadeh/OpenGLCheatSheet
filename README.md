@@ -17,8 +17,8 @@
 
 ## Setup OpenGL
 
-[learnopengl tutorial (Windows / Linux)](https://learnopengl.com/Getting-started/Creating-a-window)
-[Cherno tutorial (Windows)](https://youtu.be/OR4fNpBjmq8?si=B-6Nb8yBKXTdGV1s)
+* [learnopengl tutorial (Windows / Linux)](https://learnopengl.com/Getting-started/Creating-a-window)
+* [Cherno tutorial (Windows)](https://youtu.be/OR4fNpBjmq8?si=B-6Nb8yBKXTdGV1s)
 
 
 ## Initialising OpenGL
