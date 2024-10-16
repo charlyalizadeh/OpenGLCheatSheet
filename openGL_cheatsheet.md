@@ -1,20 +1,22 @@
 # OpenGL CheatSheet
 
+* [Setup OpenGL](#setup-opengl)
 * [Initialising OpenGL](#initialising-opengl)
   * [Init GLFW with the wanted OpenGL version](#init-glfw-with-the-wanted-opengl-version)
   * [Create a window](#create-a-window)
   * [Load GLAD](#load-glad)
   * [Set the Viewport](#set-the-viewport)
   * [Set the framebuffer resize callback](#set-the-framebuffer-resize-callback)
-* [Drawing](#drawing)
-  * [Create a Vertex Buffer Object (VBO) AND bind it](#create-a-vertex-buffer-object-(vbo)-and-bind-it)
-  * [Pass the vertices data to the VBO](#pass-the-vertices-data-to-the-vbo)
-  * [Create a Vertex Attribute Object AND bind it](#create-a-vertex-attribute-object-and-bind-it)
-  * [Specify the vertices format to the VAO](#specify-the-vertices-format-to-the-vao)
-  * [Create an Index Buffer Object (IBO) AND bind it](#create-an-index-buffer-object-(ibo)-and-bind-it)
-  * [Pass the indices to the IBO](#pass-the-indices-to-the-ibo)
+* [Vertex Buffer Object](#vertex-buffer-object)
+* [Vertex Attribute Object](#vertex-attribute-object)
+* [Index Buffer Object](#index-buffer-object)
 * [Terminology](#terminology)
-* [Common Error](#common-error)
+* [Source](#source)
+
+## Setup OpenGL
+
+[learnopengl tutorial (Windows / Linux)](https://learnopengl.com/Getting-started/Creating-a-window)
+[Cherno tutorial (Windows)](https://youtu.be/OR4fNpBjmq8?si=B-6Nb8yBKXTdGV1s)
 
 
 ## Initialising OpenGL
@@ -72,18 +74,17 @@ glfwSetFramebufferSizeCallback(window, framebufferSizCallback);
 ```
 
 
-## Drawing
 
-### Create a Vertex Buffer Object (VBO) AND bind it
+## Vertex Buffer Object
 
+Create and bind the vertex buffer object (VBO)  
 ```cpp
-int vboId;
+unsigned int vboId;
 glGenBuffers(1, &vboId);
 glBindBuffer(GL_ARRAY_BUFFER, vboId);
 ```
 
-### Pass the vertices data to the VBO
-
+Pass the data to the VBO (to the GPU)  
 ```cpp
 //Be sure to have called glBindBuffer with the right buffer id before
 //calling glBufferData
@@ -97,16 +98,16 @@ unsigned int size = vertices.size() * sizeof(float);
 glBufferData(GL_ARRAY_BUFFER, size, vertices, GL_STATIC_DRAW);
 ```
 
-### Create a Vertex Attribute Object AND bind it
+## Vertex Attribute Object
 
+Create and bind the Vertex Attribute Object (VAO)  
 ```cpp
-int vaoId;
+unsigned int vaoId;
 glGenVertexArrays(1, &vaoId);
 glBindVertexArray(vaoId);
 ```
 
-### Specify the vertices format to the VAO
-
+Specify the vertices format to the VAO
 ```cpp
 glVertexAttribPointer(0,                 // index
                       3,                 // number of element of the attribute
@@ -115,18 +116,19 @@ glVertexAttribPointer(0,                 // index
                       sizeof(float) * 3, // size of one vertex
                       (void*)0           // start of the attribute in the vertex
                       );
+glEnableVertexAttribArray(0);
 ```
 
-### Create an Index Buffer Object (IBO) AND bind it
+## Index Buffer Object
 
+Create and bind the Index Buffer Object (IBO)  
 ```cpp
 int iboId;
 glGenBuffers(1, $iboId);
 glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, iboId);
 ```
 
-### Pass the indices to the IBO
-
+Pass the indices to the IBO  
 ```cpp
 //Be sure to have called glBindBuffer with the right buffer id before
 //calling glBufferData
@@ -140,4 +142,8 @@ glBufferData(GL_ELEMENT_ARRAY_BUFFER, ids.size() * sizeof(unsigned int), ids, GL
 * *GLAD*: OpenGL is only a specification, the implementation is provided by the GPU manufacturer inside the driver.
         GLAD allows to link the OpenGL function to their implementation inside the GPU driver.
 
-## Common Error
+## Source
+
+* [Jamie King youtube channel](https://www.youtube.com/@JamieKingCS) and more particulary his [3D Computer Graphics Using OpenGL playlist](https://youtube.com/playlist?list=PLRwVmtr-pp06qT6ckboaOhnm9FxmzHpbY&si=4hb-MTGaW3H6sSE3)
+* [Chermo Opengl playlist](https://youtube.com/playlist?list=PLlrATfBNZ98foTJPJ_Ev03o2oq3-GGOS2&si=WxrcIndFibol52dQ)
+* [learnopengl website](https://learnopengl.com/)
