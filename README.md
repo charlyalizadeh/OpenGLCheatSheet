@@ -140,8 +140,9 @@ glBufferData(GL_ELEMENT_ARRAY_BUFFER, ids.size() * sizeof(unsigned int), ids, GL
 
 ## Example
 
-* [Create a window](./code/window/src/main.cpp)
-* [Draw a triangle](./code/triangle/src/main.cpp)
+* [Create a window](./code/window/)
+* [Draw a triangle](./code/triangle/)
+* [Draw a triangle using Object Oriented paradigm](./code/triangle_OO/)
 
 ## Terminology
 
